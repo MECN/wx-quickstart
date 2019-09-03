@@ -1,0 +1,10 @@
+<button bindtap="insert">插入数据</button>
+<button bindtap="update">更新数据</button>
+<button bindtap="remove">删除数据</button>
+<view>云存储</view>
+<button bindtap="upload">上传图片</button>
+<button bindtap="getFile">文件展示</button>
+<block wx:for="{{image}}" wx:key="{{index}}">
+  <image src="{{item.fileId}}" mode="widthFix"></image>
+  <button bindtap="downloadFile" data-fileid="{{item.fileId}}">文件下载</button>
+</block>
